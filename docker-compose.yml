@@ -1,0 +1,14 @@
+
+version: '3.8'
+
+services:
+  jupyter:
+     container_name: jupyter
+     build:
+        context: .
+     ports:
+        - '18888:8888'
+     volumes:
+        - type: bind
+          source: /home/toshihiro/jupyterlab/src
+          target: /mnt/host_src
